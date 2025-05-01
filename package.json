@@ -1,0 +1,16 @@
+{
+  "name": "arthur-calculator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Arthur Onyeanusi",
+  "license": "ISC",
+  "type": "module",
+  "description": "Calculator Application as part of the fufillment of my course of study (Esmodules on Node js) at ThriveSphere ",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}
