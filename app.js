@@ -2,25 +2,38 @@ const path = require("path");
 const colors = require("colors");
 const calculator = require("./my_module/calculator.js");
 
-console.log("Current file: ".blue, path.basename(__filename).grey);
+console.log("Current file: ".blue, path.basename(__filename).bgYellow);
 
-const a = 12,
-  b = 2;
+console.log("Enter two numbers seperated by a space: ".red);
 
-//Addition with Green colored output
-console.log("Addition".green, calculator.calculatorFunction(a, b, "addition"));
+process.stdin.setEncoding("utf-8");
 
-//Subtraction with red colored output
-console.log(
-  "Subtraction".red,
-  calculator.calculatorFunction(a, b, "subtraction")
-);
+process.stdin.on("data", (input) => {
+  const [a, b] = input.trim().split(" ").map(Number);
 
-//Division with yellow colored output
-console.log("Division".yellow, calculator.calculatorFunction(a, b, "division"));
+  //Addition with Green colored output
+  console.log(
+    "Addition".green,
+    calculator.calculatorFunction(a, b, "addition")
+  );
 
-//Multiplication with amber colored output
-console.log(
-  "Multiplication".blue,
-  calculator.calculatorFunction(a, b, "multiplication")
-);
+  //Subtraction with red colored output
+  console.log(
+    "Subtraction".red,
+    calculator.calculatorFunction(a, b, "subtraction")
+  );
+
+  //Division with yellow colored output
+  console.log(
+    "Division".yellow,
+    calculator.calculatorFunction(a, b, "division")
+  );
+
+  //Multiplication with amber colored output
+  console.log(
+    "Multiplication".blue,
+    calculator.calculatorFunction(a, b, "multiplication")
+  );
+
+  process.exit();
+});
