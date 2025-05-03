@@ -8,7 +8,7 @@
   "keywords": [],
   "author": "Arthur Onyeanusi",
   "license": "ISC",
-  "type": "module",
+  "type": "commonjs",
   "description": "Calculator Application as part of the fufillment of my course of study (Esmodules on Node js) at ThriveSphere ",
   "dependencies": {
     "colors": "^1.4.0"
