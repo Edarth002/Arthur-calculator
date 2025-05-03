@@ -3,7 +3,6 @@
 export default function calculatorFunction(a, b, operation) {
   let input1 = parseFloat(a);
   let input2 = parseFloat(b);
-  let operation = toString(operation);
 
   switch (operation) {
     case "addition":
